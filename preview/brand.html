@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><title>Brand · Mahatta · Souk</title>
+<link rel="stylesheet" href="../tokens.css">
+<style>
+  body { background: var(--m-bg-faint); padding: 32px; }
+  .wrap { max-width: 1120px; margin: 0 auto; }
+  .hero {
+    border-radius: var(--m-r-3xl); overflow: hidden; position: relative;
+    padding: 56px 48px; color: #fff;
+    background: linear-gradient(135deg, #2a2450 0%, #5C54C0 45%, #D4537E 100%);
+    box-shadow: var(--m-shadow-lift);
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: 0;
+    background:
+      radial-gradient(circle at 85% 20%, rgba(200,168,75,0.25), transparent 40%),
+      radial-gradient(circle at 15% 90%, rgba(127,119,221,0.35), transparent 50%);
+    pointer-events: none;
+  }
+  .hero-inner { position: relative; display: grid; grid-template-columns: 160px 1fr; gap: 40px; align-items: center; }
+  .eyebrow { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.8; margin: 0 0 12px; font-family: var(--m-font-en); font-weight: 600; }
+  .brand-name-ar { font-size: 64px; font-weight: 900; line-height: 1; margin: 0; letter-spacing: -0.02em; }
+  .brand-name-en { font-size: 20px; font-weight: 600; opacity: 0.85; margin: 12px 0 0; font-family: var(--m-font-en); }
+  .tagline { font-size: 16px; line-height: 1.7; opacity: 0.88; margin: 20px 0 0; max-width: 560px; }
+
+  .meta { margin-top: 32px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .chip {
+    background: var(--m-bg); border: 1px solid var(--m-border); border-radius: var(--m-r-xl);
+    padding: 16px 18px;
+  }
+  .chip-label { font-size: 10px; letter-spacing: 0.15em; color: var(--m-ink-3); text-transform: uppercase; font-weight: 700; font-family: var(--m-font-en); }
+  .chip-val { font-size: 16px; font-weight: 700; color: var(--m-ink); margin-top: 4px; }
+
+  h2 { font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--m-ink-2); font-weight: 700; margin: 40px 0 16px; font-family: var(--m-font-en); }
+
+  .products { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .product {
+    background: var(--m-bg); border: 1px solid var(--m-border); border-radius: var(--m-r-2xl);
+    padding: 20px; position: relative; overflow: hidden;
+  }
+  .product::before { content:""; position: absolute; top:0; right:0; left:0; height: 3px; background: var(--m-grad); }
+  .product-tag { font-size: 10px; letter-spacing: 0.15em; color: var(--m-purple); text-transform: uppercase; font-weight: 800; font-family: var(--m-font-en); }
+  .product-name { font-size: 17px; font-weight: 800; color: var(--m-ink); margin: 6px 0 2px; }
+  .product-desc { font-size: 12px; color: var(--m-ink-2); line-height: 1.55; margin: 6px 0 0; }
+  .product-spec { font-size: 11px; color: var(--m-ink-3); margin-top: 10px; font-family: var(--m-font-en); }
+
+  .voice { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+  .voice-col {
+    background: var(--m-bg); border: 1px solid var(--m-border); border-radius: var(--m-r-2xl); padding: 20px;
+  }
+  .voice-col h3 { font-size: 12px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin: 0 0 12px; font-family: var(--m-font-en); }
+  .voice-col.do h3   { color: var(--m-success); }
+  .voice-col.dont h3 { color: var(--m-error); }
+  .voice-col ul { list-style: none; padding: 0; margin: 0; }
+  .voice-col li { padding: 7px 0; border-bottom: 1px solid var(--m-border-soft); font-size: 13px; color: var(--m-ink); }
+  .voice-col li:last-child { border-bottom: none; }
+  .voice-col li::before { content: "·"; color: var(--m-ink-3); margin-left: 8px; }
+
+  .logos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+  .logo-tile { background: var(--m-bg); border: 1px solid var(--m-border); border-radius: var(--m-r-2xl); padding: 28px; display: flex; align-items: center; justify-content: center; min-height: 140px; }
+  .logo-tile.dark { background: var(--m-ink-deep); }
+  .logo-tile.grad { background: var(--m-grad); }
+  .logo-tile img { max-width: 100%; height: auto; }
+</style></head><body>
+<div class="wrap">
+  <section class="hero">
+    <div class="hero-inner">
+      <img src="../assets/logo-mark.svg" width="160" height="160" alt="Mahatta mark" style="background:#fff;border-radius:32px;padding:8px;box-shadow:var(--m-shadow-lift);">
+      <div>
+        <p class="eyebrow">The parent company</p>
+        <h1 class="brand-name-ar">محطة</h1>
+        <p class="brand-name-en">Mahatta · Partners of Success</p>
+        <p class="tagline">محطة هي الشركة الأم التي تشغّل <strong>سوق</strong> — أول منصة تسوق في المملكة العربية السعودية مبنية حول المؤثرين الموثوقين. نصنع أدوات تربط البائع بالعميل عبر صوت يثقون به.</p>
+      </div>
+    </div>
+    <div class="meta">
+      <div class="chip"><div class="chip-label">Parent brand</div><div class="chip-val">محطة · Mahatta</div></div>
+      <div class="chip"><div class="chip-label">Consumer brand</div><div class="chip-val">سوق · Souk</div></div>
+      <div class="chip"><div class="chip-label">Market</div><div class="chip-val">KSA · Arabic (RTL)</div></div>
+      <div class="chip"><div class="chip-label">Currency</div><div class="chip-val">ر.س · SAR</div></div>
+    </div>
+  </section>
+
+  <h2>Product portfolio</h2>
+  <div class="products">
+    <div class="product">
+      <div class="product-tag">B2C · Mobile</div>
+      <div class="product-name">Souk App</div>
+      <div class="product-desc">سوق — the customer-facing shopping app. Discover via influencers, buy with COD / Tabby / Tamara.</div>
+      <div class="product-spec">375 × 812 · iOS & Android · RTL</div>
+    </div>
+    <div class="product">
+      <div class="product-tag">B2C · Web</div>
+      <div class="product-name">Souk Marketplace</div>
+      <div class="product-desc">The desktop storefront. Same catalog as the app, browsable without signup.</div>
+      <div class="product-spec">1280px desktop · RTL / LTR</div>
+    </div>
+    <div class="product">
+      <div class="product-tag">B2B · Web</div>
+      <div class="product-name">Seller Dashboard</div>
+      <div class="product-desc">Merchant and influencer back office. Stock, orders, earnings, payouts.</div>
+      <div class="product-spec">1440px desktop · RTL</div>
+    </div>
+    <div class="product">
+      <div class="product-tag">Internal · Web</div>
+      <div class="product-name">Admin Panel</div>
+      <div class="product-desc">Platform ops. Seller management, finance, disputes, system settings.</div>
+      <div class="product-spec">1440px desktop · RTL</div>
+    </div>
+  </div>
+
+  <h2>Logo · three contexts</h2>
+  <div class="logos">
+    <div class="logo-tile"><img src="../assets/logo.svg" alt="Logo on light"></div>
+    <div class="logo-tile dark"><img src="../assets/logo-mark.svg" width="120" alt="Mark only"></div>
+    <div class="logo-tile grad"><img src="../assets/logo-mark.svg" width="120" style="filter:brightness(0) invert(1);opacity:0.95" alt="Mono on gradient"></div>
+  </div>
+
+  <h2>Voice & tone</h2>
+  <div class="voice">
+    <div class="voice-col do">
+      <h3>Do</h3>
+      <ul>
+        <li>Arabic first — <strong>العربية أولاً</strong>. English is a fallback, not a peer.</li>
+        <li>Warm and direct. Speak like a trusted friend recommending something.</li>
+        <li>Use real names of influencers, sellers, cities. Never generic.</li>
+        <li>Numbers in Arabic numerals (٠١٢٣...) when addressing Saudi customers.</li>
+        <li>Prices as "١٢٠ ر.س" never "SAR 120" in Arabic UI.</li>
+      </ul>
+    </div>
+    <div class="voice-col dont">
+      <h3>Don't</h3>
+      <ul>
+        <li>Stiff corporate phrasing. No "dear valued customer".</li>
+        <li>Crypto/NFT energy. No rocket emoji. No "disrupt".</li>
+        <li>Mixed-language run-on sentences. Pick one, localize the rest.</li>
+        <li>Generic stock phrases like "your one-stop shop for everything".</li>
+        <li>Over-promising logistics. Under-promise, over-deliver.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body></html>

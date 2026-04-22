@@ -1,0 +1,104 @@
+/* Mahatta · Souk — Design Tokens
+   The source of truth for colors, type, spacing, radius, shadow.
+   Import via: <link rel="stylesheet" href="tokens.css">
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  /* ──────── Brand ──────── */
+  --m-purple:        #7F77DD;   /* Mahatta primary */
+  --m-purple-dark:   #5C54C0;
+  --m-purple-50:     #F5F0FF;
+  --m-purple-100:    #E8E1FF;
+
+  --m-pink:          #D4537E;   /* Mahatta secondary */
+  --m-pink-dark:     #B13E66;
+  --m-pink-50:       #FFF0F5;
+
+  --m-gold:          #C8A84B;   /* accent, used sparingly (souk basket) */
+
+  /* The gradient. Used for CTAs, logo marks, badges. */
+  --m-grad:          linear-gradient(135deg, #7F77DD 0%, #D4537E 100%);
+  --m-grad-soft:     linear-gradient(135deg, rgba(127,119,221,0.10) 0%, rgba(212,83,126,0.10) 100%);
+
+  /* ──────── Neutrals ──────── */
+  --m-ink:           #1A1A1A;   /* body text */
+  --m-ink-2:         #6B7280;   /* secondary text */
+  --m-ink-3:         #9CA3AF;   /* tertiary / hints */
+  --m-ink-deep:      #1A1A2E;   /* dark surfaces (footer, sidebar) */
+
+  --m-bg:            #FFFFFF;
+  --m-bg-faint:      #FAFAFA;   /* page background */
+  --m-bg-gray:       #F5F5F5;   /* subtle surfaces */
+  --m-border:        #E5E7EB;
+  --m-border-soft:   #F0F0F0;
+
+  /* ──────── Semantic ──────── */
+  --m-success:       #1D9E75;
+  --m-success-bg:    #F0FDF4;
+  --m-warning:       #F59E0B;
+  --m-warning-bg:    #FEF3C7;
+  --m-error:         #E24B4A;
+  --m-error-bg:      #FEF2F2;
+  --m-info:          #3B82F6;
+  --m-info-bg:       #EFF6FF;
+
+  /* ──────── Type ──────── */
+  --m-font-ar:       'Cairo', system-ui, sans-serif;  /* Arabic + RTL */
+  --m-font-en:       'Inter', system-ui, sans-serif;  /* Latin fallback */
+  --m-font:          'Cairo', 'Inter', system-ui, sans-serif;
+
+  /* Type scale (px) — paired with weight, line-height in utility classes below */
+  --m-text-xs:       11px;
+  --m-text-sm:       12px;
+  --m-text-base:     13px;   /* app body */
+  --m-text-md:       14px;   /* web body */
+  --m-text-lg:       16px;
+  --m-text-xl:       18px;
+  --m-text-2xl:      22px;
+  --m-text-3xl:      26px;
+  --m-text-4xl:      32px;
+  --m-text-5xl:      42px;
+  --m-text-6xl:      52px;   /* hero */
+
+  /* ──────── Radius ──────── */
+  --m-r-xs:          6px;
+  --m-r-sm:          8px;
+  --m-r-md:          10px;
+  --m-r-lg:          12px;
+  --m-r-xl:          14px;    /* buttons */
+  --m-r-2xl:         16px;    /* cards */
+  --m-r-3xl:         20px;    /* large cards, hero images */
+  --m-r-full:        999px;   /* pills, avatars */
+
+  /* ──────── Spacing (4px grid) ──────── */
+  --m-s-1:  4px;
+  --m-s-2:  8px;
+  --m-s-3:  12px;
+  --m-s-4:  16px;
+  --m-s-5:  20px;
+  --m-s-6:  24px;
+  --m-s-8:  32px;
+  --m-s-10: 40px;
+  --m-s-12: 48px;
+  --m-s-16: 64px;
+
+  /* ──────── Shadow ──────── */
+  --m-shadow-1:      0 2px 8px rgba(0,0,0,0.04);
+  --m-shadow-2:      0 4px 14px rgba(212,83,126,0.30);   /* primary CTA */
+  --m-shadow-3:      0 6px 20px rgba(212,83,126,0.30);
+  --m-shadow-4:      0 8px 24px rgba(212,83,126,0.40);
+  --m-shadow-purple: 0 12px 40px rgba(127,119,221,0.15);
+  --m-shadow-lift:   0 4px 20px rgba(0,0,0,0.15);
+
+  /* ──────── Motion ──────── */
+  --m-ease:          cubic-bezier(0.2, 0.8, 0.2, 1);
+  --m-dur-fast:      150ms;
+  --m-dur:           200ms;
+  --m-dur-slow:      400ms;
+}
+
+/* ──────── Minimal utility resets for preview cards ──────── */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; font-family: var(--m-font); color: var(--m-ink); -webkit-font-smoothing: antialiased; }
