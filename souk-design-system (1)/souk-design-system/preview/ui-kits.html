@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>UI Kits · Mahatta · Souk</title>
+<link rel="stylesheet" href="../tokens.css">
+<style>
+  body { background: var(--m-bg-faint); padding: 32px; font-family: var(--m-font); }
+  .wrap { max-width: 1120px; margin: 0 auto; }
+  h1 { font-size: 28px; font-weight: 900; margin: 0 0 6px; }
+  .sub { font-size: 14px; color: var(--m-ink-2); margin: 0 0 32px; max-width: 700px; line-height: 1.6; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .kit { background:#fff; border:1px solid var(--m-border); border-radius: var(--m-r-2xl); overflow: hidden; display: flex; flex-direction: column; transition: all var(--m-dur) var(--m-ease); text-decoration:none; color: inherit; }
+  .kit:hover { transform: translateY(-4px); box-shadow: var(--m-shadow-purple); }
+  .kit-hero { height: 200px; background: var(--m-grad-soft); display:flex; align-items:center; justify-content:center; position: relative; overflow: hidden; border-bottom: 1px solid var(--m-border); }
+  .kit-hero::before { content:""; position:absolute; inset: 0; background: radial-gradient(circle at 30% 30%, rgba(127,119,221,0.25), transparent 50%), radial-gradient(circle at 70% 70%, rgba(212,83,126,0.25), transparent 50%); }
+  .kit-hero .tag { position:absolute; top:16px; right:16px; background:#fff; border-radius: var(--m-r-full); padding: 4px 12px; font-size: 10px; font-weight: 800; letter-spacing: 0.1em; color: var(--m-purple); text-transform: uppercase; font-family: var(--m-font-en); }
+  .kit-hero .icon { font-size: 64px; position: relative; z-index:1; }
+  .kit-body { padding: 20px 24px 24px; }
+  .kit-title { font-size: 20px; font-weight: 800; margin: 0 0 6px; }
+  .kit-ar { font-size: 14px; color: var(--m-purple); font-weight: 700; margin: 0 0 10px; }
+  .kit-desc { font-size: 13px; color: var(--m-ink-2); line-height: 1.65; margin: 0 0 16px; }
+  .kit-meta { display:flex; gap:12px; flex-wrap:wrap; margin-top: 12px; padding-top: 14px; border-top: 1px solid var(--m-border-soft); }
+  .kit-meta span { font-size: 10px; font-family: ui-monospace, monospace; color: var(--m-ink-3); background: var(--m-bg-faint); padding: 3px 8px; border-radius: var(--m-r-sm); }
+  .go { margin-top: 14px; font-size: 13px; font-weight: 700; color: var(--m-purple); }
+</style></head><body>
+<div class="wrap">
+  <h1>UI Kits</h1>
+  <p class="sub">Four products, one system. Each kit ships with its own screens and components, all drawing from the shared token file. Click any card to open the full kit — all interactive.</p>
+
+  <div class="grid">
+    <a class="kit" href="../ui-kits/app/index.html">
+      <div class="kit-hero"><span class="tag">Customer</span><span class="icon">📱</span></div>
+      <div class="kit-body">
+        <div class="kit-title">Souk App</div>
+        <div class="kit-ar">تطبيق سوق للعملاء</div>
+        <div class="kit-desc">8 screens: Home, Influencer Profile, Product Detail, Cart, Checkout, Order Success, Order Tracking, Profile. Multi-seller cart, Tabby/Tamara, RTL throughout.</div>
+        <div class="kit-meta"><span>375 × 812</span><span>iOS + Android</span><span>RTL</span><span>Cairo 400–900</span></div>
+        <div class="go">Open kit →</div>
+      </div>
+    </a>
+
+    <a class="kit" href="../ui-kits/web/index.html">
+      <div class="kit-hero"><span class="tag">Customer</span><span class="icon">🌐</span></div>
+      <div class="kit-body">
+        <div class="kit-title">Souk Marketplace Web</div>
+        <div class="kit-ar">متجر سوق على الويب</div>
+        <div class="kit-desc">5 pages: Home, Listing, Product, Cart, Influencer. 1280px desktop with RTL + LTR language switcher, sticky header, filter sidebar, multi-seller cart.</div>
+        <div class="kit-meta"><span>1280px</span><span>Desktop-first</span><span>RTL / LTR</span><span>Bilingual</span></div>
+        <div class="go">Open kit →</div>
+      </div>
+    </a>
+
+    <a class="kit" href="../ui-kits/seller/index.html">
+      <div class="kit-hero"><span class="tag">B2B</span><span class="icon">🏪</span></div>
+      <div class="kit-body">
+        <div class="kit-title">Seller Dashboard</div>
+        <div class="kit-ar">لوحة البائع</div>
+        <div class="kit-desc">5 screens for merchants and influencers: Dashboard, Products, Orders, Inventory, Earnings. Alert banners, inline-editable inventory, net-earnings breakdown.</div>
+        <div class="kit-meta"><span>1440px</span><span>Desktop</span><span>RTL</span><span>Seller-scoped</span></div>
+        <div class="go">Open kit →</div>
+      </div>
+    </a>
+
+    <a class="kit" href="../ui-kits/admin/index.html">
+      <div class="kit-hero"><span class="tag">Internal</span><span class="icon">⚙️</span></div>
+      <div class="kit-body">
+        <div class="kit-title">Admin Panel</div>
+        <div class="kit-ar">لوحة الإدارة</div>
+        <div class="kit-desc">5 screens for platform operators: Dashboard, Seller Management, Orders, Finance & Payouts, Settings. Dark sidebar, reusable Table + FilterBar.</div>
+        <div class="kit-meta"><span>1440px</span><span>Desktop</span><span>RTL</span><span>Cross-seller</span></div>
+        <div class="go">Open kit →</div>
+      </div>
+    </a>
+  </div>
+</div>
+</body></html>
